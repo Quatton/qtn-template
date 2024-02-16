@@ -1,0 +1,39 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": ["@nuxtjs/eslint-config"],
+  "overrides": [
+    {
+      "files": ["./server/**/*.ts"],
+      "rules": {
+        "no-console": [
+          "error",
+          {
+            "allow": ["info", "warn", "trace", "error"]
+          }
+        ]
+      }
+    }
+  ],
+  "rules": {
+    "indent": "off",
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+    "comma-dangle": ["error", "only-multiline"],
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/multi-word-component-names": "off",
+    "vue/html-self-closing": "off",
+    "arrow-parens": "off",
+    "space-before-function-paren": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  },
+  "ignorePatterns": ["node_modules/", ".nuxt/", "dist/"]
+}
