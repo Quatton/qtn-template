@@ -1,5 +1,5 @@
 import { parse } from "valibot";
-import { exampleSchema } from "../schema/example";
+import { exampleSchema } from "~/utils/schema/example";
 
 export default defineEventHandler(async (event) => {
   const { name } = parse(exampleSchema, await readBody(event));
